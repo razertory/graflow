@@ -1,0 +1,42 @@
+{
+    "dev": {
+        "appenders": {
+            "console": {
+                "type": "console"
+            },
+            "info": {
+                "type": "dateFile",
+                "filename": "logs/info",
+                "pattern": "-yyyy-MM-dd.log",
+                "alwaysIncludePattern": true,
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d{yyyy-MM-dd hh:mm:ss.SSS}] [%p] - %m"
+                }
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": ["console", "info"],
+                "level": "debug"
+            }
+        }
+    },
+    "prod": {
+        "appenders": {
+            "info": {
+                "type": "dateFile",
+                "filename": "logs/info",
+                "pattern": "-yyyy-MM-dd.log",
+                "alwaysIncludePattern": true
+            }
+        },
+        "pm2": true,
+        "categories": {
+            "default": {
+                "appenders": ["info"],
+                "level": "info"
+            }
+        }
+    }
+}

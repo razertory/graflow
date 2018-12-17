@@ -1,0 +1,17 @@
+{
+    "name": "graphql-comparator",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "start": "nodemon ./bin/www"
+    },
+    "dependencies": {
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.9",
+        "express": "^4.16.4",
+        "express-graphql": "^0.7.1",
+        "graphql": "^14.0.2",
+        "log4js": "^3.0.6",
+        "moment": "^2.23.0"
+    }
+}

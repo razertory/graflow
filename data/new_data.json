@@ -1,0 +1,198 @@
+{
+    "queryType": {
+        "name": "Query"
+    },
+    "mutationType": {
+        "name": "Mutation"
+    },
+    "subscriptionType": null,
+    "types": [{
+        "kind": "INPUT_OBJECT",
+        "name": "obj",
+        "description": "this is string type.",
+        "fields": [{
+            "name": "assignees",
+            "description": "A list of Users assigned to this object.",
+            "args": [{
+                    "name": "after",
+                    "description": "Returns the elements in the list that come after the specified cursor.",
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "before",
+                    "description": "Returns the elements in the list that come before the specified cursor.",
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "String",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "first",
+                    "description": "Returns the first _n_ elements from the list.",
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                },
+                {
+                    "name": "last",
+                    "description": "Returns the last _n_ elements from the list.",
+                    "type": {
+                        "kind": "SCALAR",
+                        "name": "Int",
+                        "ofType": null
+                    },
+                    "defaultValue": null
+                }
+            ],
+            "type": {
+                "kind": "OBJECT",
+                "name": "UserConnection",
+                "ofType": null
+
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+        }],
+        "inputFields": [{
+                "name": "field",
+                "description": "The field in which to order issues by.",
+                "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                        "kind": "ENUM",
+                        "name": "IssueOrderField",
+                        "ofType": null
+                    }
+                },
+                "defaultValue": null
+            },
+            {
+                "name": "direction",
+                "description": "The direction in which to order issues by the specified field.",
+                "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                        "kind": "ENUM",
+                        "name": "OrderDirection",
+                        "ofType": null
+                    }
+                },
+                "defaultValue": null
+            }
+        ],
+        "interfaces": [{
+                "kind": "INTERFACE",
+                "name": "Node",
+                "ofType": null
+            },
+            {
+                "kind": "INTERFACE",
+                "name": "Assignable",
+                "ofType": null
+            }
+        ],
+        "enumValues": [{
+                "name": "OFF_TOPIC",
+                "description": "The issue or pull request was locked because the conversation was off-topic.",
+                "isDeprecated": false,
+                "deprecationReason": null
+            },
+            {
+                "name": "TOO_HEATED",
+                "description": "The issue or pull request was locked because the conversation was too heated.",
+                "isDeprecated": false,
+                "deprecationReason": "a"
+            }
+        ]
+    }],
+    "directives": [{
+            "name": "include",
+            "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
+            "args": [{
+                "name": "if",
+                "description": "Included when true.",
+                "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                        "kind": "LIST",
+                        "name": null,
+                        "ofType": {
+                            "kind": "SCALAR",
+                            "name": "Boolean",
+                            "ofType": null
+                        }
+                    }
+                },
+                "defaultValue": null
+            }],
+            "locations": [
+                "FIELD",
+                "FRAGMENT_SPREAD",
+                "INLINE_FRAGMENT"
+            ],
+            "onOperation": false,
+            "onFragment": true,
+            "onField": true
+        },
+        {
+            "name": "skip",
+            "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
+            "args": [{
+                "name": "if",
+                "description": "Skipped when true.",
+                "type": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                        "kind": "SCALAR",
+                        "name": "Boolean",
+                        "ofType": null
+                    }
+                },
+                "defaultValue": null
+            }],
+            "locations": [
+                "FIELD",
+                "FRAGMENT_SPREAD",
+                "INLINE_FRAGMENT"
+            ],
+            "onOperation": false,
+            "onFragment": true,
+            "onField": true
+        },
+        {
+            "name": "deprecated",
+            "description": "Marks an element of a GraphQL schema as no longer supported.",
+            "args": [{
+                "name": "reason",
+                "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted in [Markdown](https://daringfireball.net/projects/markdown/).",
+                "type": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                },
+                "defaultValue": "\"No longer supported\""
+            }],
+            "locations": [
+                "FIELD_DEFINITION",
+                "ENUM_VALUE"
+            ],
+            "onOperation": false,
+            "onFragment": false,
+            "onField": false
+        }
+    ]
+}
