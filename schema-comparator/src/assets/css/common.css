@@ -1,0 +1,43 @@
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.rotate {
+    animation: rotating 1.2s linear infinite;
+}
+
+.mask {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.mask div {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mask i {
+    display: inline-block;
+    font-size: 36px;
+    color: #FFF;
+}
