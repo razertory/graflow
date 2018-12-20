@@ -13,9 +13,10 @@ Work flow tool for GraphQL developers
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:3000
+# install nodemon to hot reload
 npm install nodemon -g
 
+# serve with hot reload at localhost:3000
 # already changed the config in package.json
 npm start
 # otherwise
