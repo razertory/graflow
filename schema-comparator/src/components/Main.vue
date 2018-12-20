@@ -33,7 +33,6 @@ export default {
   name: "Main",
   data() {
     return {
-      query,
       oldSchema: JSON.parse(
         '{"queryType":{"name":"Query"},"mutationType":{"name":"Mutation"}}'
       ),
