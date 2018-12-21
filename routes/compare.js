@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const Shcema = require('../src/schema-comparator/graphql/Schema')
-const Result = require('../src/schema-comparator/result');
+const { Schema, Result } = require('../src/schema-comparator');
 
 router.post('/', function(req, res) {
     const logHead = `[${Math.floor(Math.random()*10000)+Math.floor(Math.random()*10)*10000}] ${req.method} /compare`;
@@ -14,8 +13,8 @@ router.post('/', function(req, res) {
     let result = {};
 
     try {
-        let old_schema = new Shcema(oldSchema);
-        let new_schema = new Shcema(newSchema);
+        let old_schema = new Schema(oldSchema);
+        let new_schema = new Schema(newSchema);
         let changes = new_schema.diff(old_schema);
         let data = new Result(changes).getResult();
         result = {

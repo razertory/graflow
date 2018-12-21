@@ -41,3 +41,27 @@
     font-size: 36px;
     color: #FFF;
 }
+
+.jsoneditor {
+    border: 1px solid #DDD !important;
+}
+
+.ace_variable {
+    color: #409EFF !important;
+}
+
+.ace-jsoneditor .ace_cursor {
+    border-left: 1px solid #000000 !important;
+}
+
+.ace-jsoneditor .ace_marker-layer .ace_selection {
+    background: #D7D4F0 !important;
+}
+
+.ace-jsoneditor .ace_marker-layer .ace_active-line {
+    background: none !important;
+}
+
+.ace-jsoneditor .ace_string {
+    color: #D64292 !important;
+}
